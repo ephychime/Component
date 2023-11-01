@@ -1,47 +1,52 @@
-//Creating  a component
-//We can see that function name is profile and will return the image 
-// export default function Profile() {
-//   // return (
-//     return (
-//       <div>
-//         <h1>Hello, React users!</h1>
-//         <img
-//       src="https://i.imgur.com/MK3eW3Am.jpg"
-//       alt="Katherine Johnson" />
-//       </div>
-//     );
+// In-line style
+export default function TodoList() {
+  return (
+    <div className="main" style={{backgroundColor : "blue", color : "white",textAlign : "center"}}>
+      <h1 style={{color : "seagreen"}}>Inline Styling React Using CSS</h1>
+      <p>There are various ways to style React with css.</p>
+      <ul style={{listStyleType : "none", fontSize : "small"}}>
+        <li>Inline styling</li>
+        <li>CSS Stylesheets</li>
+        
+      </ul>
+    </div>
+  );
+  }
+
+// a better appraoch could be creating an object that contains styles for different elements.Then add it to an element using the style attribute and then select the property to style like:.
+  
+// import {React} from 'react'
+
+// function Todolist() {
+//   const styles = {
+//     main: {
+//       backgroundColor: "blue",
+//       width: "100%",
+//     },
+//     headingText: {
+//       padding: "10px",
+//       color: "seagreen",
+//     },
+//     paraText:{
+
+//     },
+//     listingType:{
+//       fontSize : "medium",
+//       color : "white",
+//       padding : "8px"
+//     },
+//   };
+//   return (
+//     <div style={styles.main}>
+//       <h1 style={styles.headingText}>Styling React Using CSS</h1>
+//       <p styles={styles.paraText}>There are various ways to style React with css.</p>
+//       <ul style={styles.listingType}>
+//         <li>Inline styling</li>
+//         <li>CSS Stylesheets</li>
+//       </ul>
+//     </div>
+//   );
 // }
 
-//NESTING COMPONENTS
-//in this example, we have a parent component (User) that nests a child component (Userdetails). 
-// The child component is responsible for rendering a simple header.
-
-// parent component
-function User() {
-  return (
-    <>
-    <h3>I may have forgotten my password</h3>
-    <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    /> 
-    </>
-    
-  );
-}
-// child component
-export default function Userdetails() {
-  return (
-    <section>
-      <h1>My username is Kathy.j</h1>
-      {/* <h3>I may have forgotten my password</h3> */}
-      <User />
-      <User />
-      <User />
-
-    </section>
-  );
-}
-
-
+// export default TodoList ;
 
