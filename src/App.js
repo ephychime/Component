@@ -1,52 +1,27 @@
-// In-line style
-export default function TodoList() {
-  return (
-    <div className="main" style={{backgroundColor : "blue", color : "white",textAlign : "center"}}>
-      <h1 style={{color : "seagreen"}}>Inline Styling React Using CSS</h1>
-      <p>There are various ways to style React with css.</p>
-      <ul style={{listStyleType : "none", fontSize : "small"}}>
-        <li>Inline styling</li>
-        <li>CSS Stylesheets</li>
-        
-      </ul>
-    </div>
-  );
-  }
+//EXTERNAL STYLING
+// React can import CSS files. The process is similar to how we link up CSS file in the HTML <head>:
+//1. Create a new CSS file in your project directory.
+//2. Write CSS.
+//3. Import it into the React file.
 
-// a better appraoch could be creating an object that contains styles for different elements.Then add it to an element using the style attribute and then select the property to style like:.
-  
-// import {React} from 'react'
+import React from "react";
+import './App.css';
 
-// function Todolist() {
-//   const styles = {
-//     main: {
-//       backgroundColor: "blue",
-//       width: "100%",
-//     },
-//     headingText: {
-//       padding: "10px",
-//       color: "seagreen",
-//     },
-//     paraText:{
+const Box = () => (
+  <div className="Box">
+    <h3 className="Text_content"> External Styling React Components </h3>
+    <img 
+        src="https://i.imgur.com/yXOvdOSs.jpg" 
+        alt="Hedy Lamarr" 
+        className="photo" 
+      />
+    <p>React can import CSS files. The process is similar to how we link up CSS file in the HTML and is as follows:</p>
+    <ol className="List">
+      <li> Create a new CSS file in your project directory.</li>
+      <li>Write CSS</li>
+      <li>Import it into React File</li>
+    </ol>
+  </div>
+);
 
-//     },
-//     listingType:{
-//       fontSize : "medium",
-//       color : "white",
-//       padding : "8px"
-//     },
-//   };
-//   return (
-//     <div style={styles.main}>
-//       <h1 style={styles.headingText}>Styling React Using CSS</h1>
-//       <p styles={styles.paraText}>There are various ways to style React with css.</p>
-//       <ul style={styles.listingType}>
-//         <li>Inline styling</li>
-//         <li>CSS Stylesheets</li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default TodoList ;
-
+export default Box;
