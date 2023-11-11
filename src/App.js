@@ -16,32 +16,19 @@
 //in this example, we have a parent component (User) that nests a child component (Userdetails). 
 // The child component is responsible for rendering a simple header.
 
-// parent component
-function User() {
-  return (
-    <>
-    <h3>I may have forgotten my password</h3>
-    <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    /> 
-    </>
-    
-  );
-}
-// child component
-export default function Userdetails() {
-  return (
-    <section>
-      <h1>My username is Kathy.j</h1>
-      {/* <h3>I may have forgotten my password</h3> */}
-      <User />
-      <User />
-      <User />
+import Counter from "./Statecounter/statescreen";
 
-    </section>
+function App() {
+  return (
+    <div>
+  
+      <Counter />
+    </div>
   );
 }
+
+export default App;
+
 
 
 
